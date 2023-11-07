@@ -1,0 +1,82 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <!-- First:<input type="text" id="num1">
+    second:<input type="text" id="num2">
+    <br>
+    <input type="button" onClick="addBy()" value="Add">
+    <div id="output"></div>
+    <script>
+      var output=document.getElementById("output");
+      var num1=document.getElementById("num1");
+      var num2=document.getElementById("num2");
+      function addBy(){
+        var a=num1.value + "+" + num2.value;
+        var b=Number(num1.value) + Number(num2.value);
+        outHtml(a,b);
+      }
+      function outHtml(a,b){
+        output.innerHTML += a + "=" + b + "<br>";
+      }
+
+    </script> -->
+
+    First: <input type="text" id="num1">
+    Second: <input type="text" id="num2">
+    <br><br>
+    <input type="button" onclick="addBy()" value="Add">
+    <input type="button" onclick="subtractBy()" value="subtract">
+    <input type="button" onclick="multipleBy()" value="multiply">
+    <input type="button" onclick="divideBy()" value="divide">
+    <br><div id="output"></div>
+
+    <script>
+
+      var output = document.getElementById("output");
+      var num1=document.getElementById("num1");
+      var num2=document.getElementById("num2");
+
+      function addBy(){
+        var a=Number(num1.value);
+        var b="+";
+        var c=Number(num2.value);
+        var d= a + c;
+        outHtml(a,b,c,d);
+        // output.innerHTML += Number(num1.value) + Number(num2.value);
+      }
+
+      function subtractBy(){
+        var a=Number(num1.value);
+        var b="-";
+        var c=Number(num2.value);
+        var d= a - c;
+        outHtml(a,b,c,d);
+      }
+
+      function multipleBy(){
+        var a=Number(num1.value);
+        var b="*";
+        var c=Number(num2.value);
+        var d= a * c;
+        outHtml(a,b,c,d);
+      }
+
+      function divideBy(){
+        var a=Number(num1.value);
+        var b="/";
+        var c=Number(num2.value);
+        var d= a / c;
+        outHtml(a,b,c,d);
+      }
+      function outHtml(a,b,c,d){
+        output.innerHTML +=a+" "+b+" "+c+"="+ d +"<br>";
+      }
+
+
+    
+
+    </script>
+  </body>
+</html>
