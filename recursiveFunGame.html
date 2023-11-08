@@ -1,0 +1,43 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <div id="output"></div>
+    <input type="button" onclick="start()" value="Start Game">
+
+  <script>
+    var secretWord=["Java", "JavaScript", "Html","Css"];
+    var mysteryNum;
+    var output=document.getElementById("output");
+
+    function start(){
+      mysteryNum=Math.floor(Math.random()*secretWord.length);
+      getSecret(prompt("what is the word?"));
+      }
+    function getSecret(secret){
+            if(secret==secretWord[mysteryNum]){
+              output.innerHTML="you are correct";
+      }else{
+        getSecret(prompt("Guess Again?"));
+      }
+      }
+
+    
+
+    // var secretWord ="JavaScript";
+    // function start(){
+    //   getSecret(prompt("what is the word?"));
+    // }
+    // function getSecret(secret){
+    //   if(secret==secretWord){
+    //     output.innerHTML ="You are correct";
+    //   }else{
+    //     getSecret(prompt("Guess Again?"));
+    //   }
+    // }
+  
+      
+    </script>
+  </body>
+</html>
