@@ -1,0 +1,24 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <div id="output"></div>
+    <input type="button" onclick="myFun()" value="click me">
+    <script>
+
+      var output = document.getElementById("output");
+
+      var adj=["super", "good", "bad","angry"];
+      function myFun(){
+        var question=prompt("what is your name?");
+        var nameAdj=Math.floor(Math.random()*adj.length);
+        output.innerHTML += adj[nameAdj] +" " + question +"<br>";
+      }
+
+
+    
+
+    </script>
+  </body>
+</html>
