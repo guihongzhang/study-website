@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    Page 1: Window SetTimeOut Method
+    <div id="output"></div><br>
+    <input type="button" onclick="startInt()" value="start">&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" onclick="clearInt()" value="stop">
+    <script>
+      var output=document.getElementById("output");
+      var myTimer;
+
+      function startInt(){
+        myTimer=window.setTimeout(myPopup, 1000);
+      }
+      function clearInt(){
+        window.clearInterval(myTimer);
+      }
+      function myPopup(){
+        alert("Hello");
+      }
+
+    </script>
+
+  </body>
+</html>
