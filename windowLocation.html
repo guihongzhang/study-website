@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+
+<body>
+    <div id="wrapper">Page 1</div>
+    <form name="myForm"><br>
+      <input type="text" id="url" name="url" value="http://www.google.com">
+      <input type="button" onclick="goUrl()" value="Go to a URL">
+      <input type="button" onclick="goUrl2('https://www.youtube.com/')" value="Go to my favorite URL">
+      <input type="button" onclick="myValue()" value="value">
+    </form>
+    <script>
+        var output = document.getElementById('wrapper');
+
+        function goUrl(){
+          var url=document.getElementById("url").value;
+          window.location=url;
+        }
+        function goUrl2(url){
+          window.location = url;
+
+        }
+        function myValue(){
+          document.getElementById("wrapper").innerHTML=document.myForm.url.value;
+        }
+    </script>
+</body>
+
+</html>
+
