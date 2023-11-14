@@ -1,0 +1,29 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <div id="wrapper">page 1</div><br>
+    <a href="index1.html">ex1</a>
+    <a href="index.html">ex2</a>
+    <a href="index2.html">ex3</a>
+    <input type="button" onclick="print()" value="Print">
+    <input type="button" onclick="prompt('hello, world')" value="Prompt">
+    <input type="button" onclick="alert('go to work')" value="Alert">
+    <input type="button" onclick="display()" value="Display">
+    <!-- <div id="wrapper">page 1</div><br> -->
+    <script>
+      var output=document.getElementById("wrapper");
+      function display(){
+        output.innerHTML = "You are perfect!";
+      }
+
+      function goBack(){
+        window.history.go(-1);
+      }
+
+      
+
+    </script>
+  </body>
+</html>
