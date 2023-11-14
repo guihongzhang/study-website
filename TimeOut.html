@@ -6,12 +6,18 @@
     <div id="output"></div><br>
     <input type="button" onclick="startInt()" value="start">&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="button" onclick="clearInt()" value="stop">
+    
     <script>
-      var output=document.getElementById("output");
+      var output=document.getElementById("wrapper");
+      window.setTimeout(updateWrapper, 5000);
       var myTimer;
 
       function startInt(){
+
         myTimer=window.setTimeout(myPopup, 1000);
+      }
+      function updateWrapper(){
+        document.getElementById("wrapper").innerHTML="Welcome to my websiet :)";
       }
       function clearInt(){
         window.clearInterval(myTimer);
@@ -21,6 +27,7 @@
       }
 
     </script>
+
 
   </body>
 </html>
