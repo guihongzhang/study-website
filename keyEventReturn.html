@@ -1,0 +1,34 @@
+Source Placeholder Image Generator
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+<body>
+    <div id="wrapper">Complete JavaScript Course</div>
+  <!-- with onpaste=return true, you can copy on the text -->
+    only numbers:
+    <input type="text" name="myNum1" onkeypress="return numCheck()" onpaste="return false" >   
+    <!-- <input type="text" name="myNum" onkeypress="numCheck()" onpaste="return tures" > -->  
+    <!-- with onpaste=return false, you cann't paste on the text -->
+    only letters:
+    <input type="text" name="myNum2" onkeypress="return numCheck2()" onpaste="return false" >   
+    <script>
+
+      function numCheck(){
+        message(!isNaN(event.key)); //show the letter you just entered
+        // message(event.target.value)   //show what you type 
+        return !isNaN(event.key);
+      }
+
+      function numCheck2(){
+        message(isNaN(event.key)); //show the letter you just entered
+        // message(event.target.value)   //show what you type 
+        return isNaN(event.key);
+      }
+      function message(m){
+        document.getElementById("wrapper").innerHTML=m;
+      }
+    </script>
+</body>
+</html>
