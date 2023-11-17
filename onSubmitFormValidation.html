@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complete JavaScript Course</title>
+</head>
+<body>
+    <div id="wrapper">Complete JavaScript Course</div>
+    <form action="imageCarousel.html" method="get" onsubmit="return valForm()">
+      <br>FirstName:
+      <input type="text" id="firstName" onkeypress="return numCheck2()">
+      <br><br>LastName:
+      <input type="text" id="lastName" onkeypress="return numCheck2()">
+      <br><br>Age:
+      <!-- use onkeypress plus function numCheck to ask user enter only number -->
+      <input type="text" id="age" onkeypress="return numCheck()">  <br><br>
+      <input type="submit" value="submit">
+    </form>
+    <script>
+
+      function valForm(){
+        var p=event.target.children;
+        if(p.firstName.value==""){
+          message("Needs a first Name!!");
+          return false;
+        }else if(p.lastName.value==""){
+          message("Needs a last Name!!");;
+          return false;
+        }else if(p.age.value==""){
+          message("Needs age!!");
+          return false;
+        }
+        console.log(p.firstName);
+        return true;
+      }
+
+      function numCheck(){
+        message(!isNaN(event.key)); //show the letter you just entered
+        // message(event.target.value)   //show what you type 
+        return !isNaN(event.key);
+      }
+      function numCheck2(){
+        message(isNaN(event.key)); //show the letter you just entered
+        // message(event.target.value)   //show what you type 
+        return isNaN(event.key);
+      }
+      
+      function message(m){
+        document.getElementById("wrapper").innerHTML=m;
+      }
+    </script>
+  
+</body>
+</html>
