@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #overlap{
+        visibility: hidden;
+        position:absolute;
+        left:0;
+        right:0;
+        top:50px;
+        margin-left:auto;
+        margin-right:auto;
+        width:400px;
+        height:200px;
+        background-color: #ddd;
+        border:1px solid black;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body onload="start()">
+    <input type="button" id="oLay"  value="Pop Up Window">
+    <div id="message">Message1</div>
+
+    <div class="output">Test Me 1</div>
+    <div class="output">Test Me 2</div>
+    <div id="pickme1">
+    <div class="output highlight" >Test Me 3</div>
+    </div>
+    <input type="text" name="queryStuff" id="queryStuff">
+    <input type="button" onclick="mySel()" value="GetQuery">
+
+    <div id="pickme2">
+    <div class="output">Test Me 4 Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4Test Me 4</div>
+    <div class="output">Test Me 5</div>
+    <div class="output">Test Me 6</div>
+  </div>
+    <div class="output highlight">Test Me 7</div>
+    <div class="output">Test Me 8</div>
+    <div class="output">Test Me 9</div>
+    <div class="output">Test Me 10</div>
+    <br>
+    <div id="overlap">
+      <div>
+        <p>some default content here nothing importatn. complete javeScript course complete javeScript coursecomplete javeScript coursecomplete javeScript coursecomplete javeScript course</p>
+      </div>
+    </div>
+
+    <script>
+    var bgColor=["red", "blue", "yellow", "green", "pink", "purple"];
+    var message=document.getElementById('message');
+    var c;
+    var output=document.querySelectorAll('.output');
+  
+
+    document.getElementById('oLay').onclick=function(){
+    var el=document.getElementById('overlap');
+    el.style.visibility=(el.style.visibility=="visible")? "hidden":"visible";
+}
+    
+    </script>
+  </body>
+</html>
